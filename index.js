@@ -167,7 +167,7 @@ app.get("/updateOne", function (req, res) {
 app.get("/updateAll", function (req, res) {
     dbConnected
         .collection("items2")
-        .updateAll(
+        .updateMany(
             { department: "Software" },
             { $set: { department: "Software", salary: 35000 } },
             function (err, suc) {
